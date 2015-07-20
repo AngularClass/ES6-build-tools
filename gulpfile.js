@@ -9,9 +9,6 @@
 var gulp    = require('gulp'),
     sync    = require('run-sequence'),
     serve   = require('browser-sync'),
-/* START SOLUTION */
-    webpack = require('gulp-webpack');
-/* END SOLUTION */
 
 /*
  * A convenience object to hold different paths we care about.
@@ -23,26 +20,8 @@ var paths = {
   app: ['client/**/*.{js,css,html}']
 };
 
-/* START SOLUTION */
-/*
- * Gulp is built ontop of node's powerful 'stream' concepts.
- * You can think of a stream as faucet of water that flows through different 'pipes'
- * We open the gulp faucet by passing a glob of files into gulp.src.
- * Then we can 'pipe' these files through all sorts of different transformations,
- * each one returning its own stream that can continue to be piped into more transformations.
- *
- * Here, we're grabbing the entry point to our (making the `entry` property in webpack.config.js unnecessary),
- * piping the entry into webpack plugin, bundling our app, and piping that into the client folder designated by gulp.dest
- *
- * NOTE: gulp.dest defines our webpack's output folder. Webpack will get mad if it finds an output.path property 
- * in webpack.config.js. We still need `filename` though.
-*/
-gulp.task('build', function() {
-  return gulp.src('./client/app.js')
-    .pipe(webpack(require('./webpack.config.js')))
-    .pipe(gulp.dest('client'));
-});
-/* END SOLUTION */
+// TODO: Write a `gulp build` task that uses webpack to build your app and output it to `client/bundle.js`
+// HINT: Some properties that are needed to run `webpack` from the CLI are unnecessary when paired with gulp
 
 /*
  * Browsersync manages a server that plays nicely with gulp (see serve.reload below)
@@ -83,5 +62,5 @@ gulp.task('watch', function() {
  * and then invoke the `done` callback to let gulp know all asyncronous tasks have been completed.
  */
 gulp.task('default', function(done) {
-  sync(/*START SOLUTION*/'build'/*END SOLUTION*/, 'serve', 'watch', done);
+  sync('serve', 'watch', done);
 });
