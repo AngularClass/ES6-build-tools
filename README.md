@@ -1,6 +1,8 @@
 # ES6 Build tools
 
-Learn how to set up an ES6 environment with Webpack, Gulp and Babel. You can use this environment with Angular or any other framework. Read through the comprehensive introduction and then hit the [exercises](#exercises).
+Learn how to set up an ES6 environment with Webpack, Gulp and Babel and practice building your own. You can use this environment with Angular or any other framework.
+
+Read through the comprehensive introduction and then hit the [exercises](#exercises).
 
 # Introduction
 
@@ -199,7 +201,7 @@ It's your turn! We've only just scratched the surface of what our build tools ca
 Solutions to the Basic Requirements are on the [solution branch](https://github.com/angular-class/ES6-build-tools/tree/solution). There are no solutions for the Extra Credit or Nightmare Mode challenges. Use the lessons learned from the Basic Requirements to figure these out on your own!
 
 ## Basic Requirements
-- [ ] Get a copy of this repo. It starts in the state the the introduction left off.
+- [ ] Get a copy of this repo. It starts in the state that the introduction left off.
   - [ ] Fork it
   - [ ] Clone it
   - [ ] Run `npm install`
