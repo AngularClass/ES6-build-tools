@@ -73,7 +73,7 @@ Update `client/app.js`
 alert(greeting);
 ```
 Recompile with:
-`webpack .client/app.js ./client/bundle.js`
+`webpack ./client/app.js ./client/bundle.js`
 
 Update your browser window and you should see the alert `It works from content.js`
 
