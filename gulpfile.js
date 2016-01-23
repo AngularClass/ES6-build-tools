@@ -8,7 +8,7 @@
 
 var gulp    = require('gulp'),
     sync    = require('run-sequence'),
-    serve   = require('browser-sync'),
+    serve   = require('browser-sync');
 
 /*
  * A convenience object to hold different paths we care about.
