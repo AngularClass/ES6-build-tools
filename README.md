@@ -139,7 +139,7 @@ var gulp = require('gulp');
 var serve = require('browser-sync');
 
 gulp.task('serve', function() {
-  // This will serve our client folder on localhost:4500
+  // This will serve our client folder on localhost:3000
   serve({
     port: 3000,
     open: false,
@@ -149,7 +149,7 @@ gulp.task('serve', function() {
   });
 });
 ```
-We've defined a new task so when we run `gulp serve`, our client folder will be served on `localhost:4500`
+We've defined a new task so when we run `gulp serve`, our client folder will be served on `localhost:3000`
 
 This is only semi useful, because right now if we make any changes to our app we have to run our webpack command: `webpack ./client/app.js ./client/bundle.js --module-bind 'js=babel'` to update our `bundle.js` and then run `gulp serve` again. This section was meant to just introduce you to creating new gulp tasks. You'll unlock Gulp's full potential in the exercises.
 
