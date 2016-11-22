@@ -190,6 +190,7 @@ Update `gulpfile.js`
 ```js
 var gulp = require('gulp');
 var serve = require('browser-sync');
+var sync = require('run-sequence');
 
 // ... previously defined tasks
 
