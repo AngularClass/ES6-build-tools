@@ -87,8 +87,9 @@ Update your browser window and you should see the alert `It works from content.j
 #### Add ES6 to our app
 We want to add ES6 to our application. Webpack can only handle ES5 natively, so we need the babel-loader to process js files written with ES6 down to ES5. We can install [any of the webpack loaders](http://webpack.github.io/docs/list-of-loaders.html) through `npm`.
 
-Run `npm init`. Default options are fine. Just repeatedly hit <enter>.
-Run `npm install babel-loader --save-dev`
+Run `npm init`. Default options are fine. Just repeatedly hit enter.
+
+Run `npm install babel-core babel-loader --save-dev`
 
 ES6ify `client/content.js`
 ```js
