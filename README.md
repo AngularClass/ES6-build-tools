@@ -56,7 +56,7 @@ Create `client/index.html`
     <meta charset="UTF-8">
   </head>
   <body>
-    <script src="bundle.js"></script>
+    <script src="./client/bundle.js"></script>
   </body>
 </html>
 ```
@@ -87,7 +87,7 @@ Update your browser window and you should see the alert `It works from content.j
 #### Add ES6 to our app
 We want to add ES6 to our application. Webpack can only handle ES5 natively, so we need the babel-loader to process js files written with ES6 down to ES5. We can install [any of the webpack loaders](http://webpack.github.io/docs/list-of-loaders.html) through `npm`.
 
-Run `npm init`. Default options are fine.
+Run `npm init`. Default options are fine. Just repeatedly hit <enter>.
 Run `npm install babel-loader --save-dev`
 
 ES6ify `client/content.js`
@@ -104,7 +104,7 @@ alert(`${greeting} and with ES6!!`)
 ```
 
 Now, we can use a special flag in our CLI to send all `.js` files through babel. Recompile your beautiful new ES6 app:
-`webpack ./client/app.js ./client/bundle.js --module-bind 'js=babel'`
+`webpack ./client/app.js ./client/bundle.js --module-bind 'js=babel-loader'`
 
 Update your browser window and you should see the alert `It works from content.js`
 
